@@ -63,7 +63,7 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            background: rgba(66, 66, 66, 0.9);
+            background: #150e12;
             border-radius: 15px;
             padding: 60px 0px 30px 100px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
@@ -275,10 +275,293 @@
             font-size: 14px;
             color: #AAB8C2;
         }
+
+        /* Update the circle to be an image with a ring */
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-image: url(pfp1.png); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 0 5px #7289DA; /* Ring effect */
+            cursor: pointer;
+            transition: transform 0.2s;
+            z-index: 10;
+        }
+
+        .circle:hover {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+
+        .chat-box {
+            width: 400px;
+            height: 500px;
+            background-color: #2F3136;
+            border-radius: 10px;
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            padding: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .chat-header {
+            background-color: #2F3136;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: left;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #40444B;
+            margin-bottom: 10px;
+        }
+
+        .chat-content {
+            padding: 10px 0;
+            flex: 1;
+            overflow-y: auto;
+            max-height: 380px;
+            margin-bottom: 15px;
+            background-color: #2F3136;
+            color: #DCDDDE;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        input[type="text"] {
+            padding: 12px 15px;
+            border: 1px solid #40444B;
+            border-radius: 4px;
+            flex: 1;
+            font-size: 14px;
+            background-color: #3A3C41;
+            color: white;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #7289DA;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .emoji-btn {
+            height: 43px;
+            background-color: #3A3C41;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+        .emoji-btn:hover{
+            background-color: #4d4c58;
+        }
+
+        .file-btn {
+            background-color: #3A3C41;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .file-btn {
+            height: 23px;
+            display: flex;
+            align-items: center;
+        }
+
+        .file-btn:hover{
+            background-color: #4d4c58;
+        }
+
+        .emoji-container {
+            display: none;
+            position: absolute;
+            bottom: 70px;
+            left: 15px;
+            background-color: #3A3C41;
+            padding: 10px;
+            border-radius: 4px;
+            z-index: 200;
+            width: 200px;
+            max-height: 200px;
+            overflow-y: scroll;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+        }
+
+        .emoji-container button {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        #sendBtn {
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(paper-plane2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            border: none;
+        }
+
+        #sendBtn:hover {
+            background-image: url(paper-plane.png);
+        }
+
+        .message {
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 16px;
+            max-width: 75%;
+            word-wrap: break-word;
+            display: flex;
+            align-items: center;
+            position: relative;
+            line-height: 1.4;
+            background-color: #40444B;
+            color: #DCDDDE;
+        }
+
+        .user {
+            background-color: #7289DA;
+            color: white;
+            text-align: left;
+        }
+
+        .ai {
+            background-color: #40444B;
+            color: #DCDDDE;
+            text-align: left;
+        }
+
+        .profile-pic {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .image-preview {
+            max-width: 100%;
+            max-height: 200px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: block;
+            padding: 2px;
+        }
+
+        .image-preview-container {
+            width: calc(100% - 50px);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: #40444B;
+            position: relative;
+            display: none;
+            margin-right: 10px;
+        }
+
+        .image-preview-container .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .file-name {
+            position: absolute;
+            bottom: 5px;
+            left: 10px;
+            right: 10px;
+            color: #DCDDDE;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     </style>
 </head>
 <body>
     <div class="meteor-container"></div>
+
+    <div id="circle" class="circle"></div>
+
+    <div id="chatBox" class="chat-box">
+        <div class="chat-header">Chat with Diptie Admin</div>
+        <div class="chat-content" id="chatContent"></div>
+
+        <div id="imagePreviewContainer" class="image-preview-container">
+            <button class="close-btn" id="closeImagePreview">×</button>
+            <img id="imagePreview" class="image-preview" />
+            <div id="imageTitle" class="file-name">Untitled Image</div>
+        </div>
+
+        <div class="input-container">
+            <button class="emoji-btn" id="emojiBtn">😊</button>
+            <div class="file-btn">
+                <label for="fileUpload">📎</label>
+                <input type="file" id="fileUpload" class="file-input" accept="image/*" />
+            </div>
+            <input type="text" id="userInput" placeholder="Type your message..." />
+            <button id="sendBtn"></button>
+        </div>
+
+        <div id="emojiContainer" class="emoji-container">
+            <!-- Emoji buttons with more emojis -->
+            <button class="emoji" data-emoji="😊">😊</button>
+            <button class="emoji" data-emoji="😂">😂</button>
+            <button class="emoji" data-emoji="😍">😍</button>
+            <button class="emoji" data-emoji="😭">😭</button>
+            <button class="emoji" data-emoji="😎">😎</button>
+            <button class="emoji" data-emoji="😃">😃</button>
+            <button class="emoji" data-emoji="😜">😜</button>
+            <button class="emoji" data-emoji="🤔">🤔</button>
+            <button class="emoji" data-emoji="😏">😏</button>
+            <button class="emoji" data-emoji="🤯">🤯</button>
+            <button class="emoji" data-emoji="🥺">🥺</button>
+            <button class="emoji" data-emoji="🥳">🥳</button>
+            <button class="emoji" data-emoji="👍">👍</button>
+            <button class="emoji" data-emoji="👀">👀</button>
+            <button class="emoji" data-emoji="🔥">🔥</button>
+            <button class="emoji" data-emoji="💡">💡</button>
+        </div>
+    </div>
     <div class="content">
         <div class="box">
             <img src="Logo1.png" alt="Logo" class="logo">
@@ -479,6 +762,174 @@
             alert('Logged in successfully!');
             closeModal();
         }
+    </script>
+    <script>
+        const circle = document.getElementById('circle');
+        const chatBox = document.getElementById('chatBox');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatContent = document.getElementById('chatContent');
+        const emojiBtn = document.getElementById('emojiBtn');
+        const emojiContainer = document.getElementById('emojiContainer');
+        const fileUpload = document.getElementById('fileUpload');
+        const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+        const closeImagePreview = document.getElementById('closeImagePreview');
+        const imagePreview = document.getElementById('imagePreview');
+        const imageTitle = document.getElementById('imageTitle');
+        const emojis = document.querySelectorAll('.emoji');
+
+        let isDragging = false;
+        let offsetX, offsetY;
+        let currentImageTitle = "Untitled Image";
+
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        circle.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - circle.getBoundingClientRect().left;
+            offsetY = e.clientY - circle.getBoundingClientRect().top;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                let newLeft = e.clientX - offsetX;
+                let newTop = e.clientY - offsetY;
+
+                if (newLeft < 0) newLeft = 0;
+                if (newTop < 0) newTop = 0;
+                if (newLeft + circle.offsetWidth > windowWidth) newLeft = windowWidth - circle.offsetWidth;
+                if (newTop + circle.offsetHeight > windowHeight) newTop = windowHeight - circle.offsetHeight;
+
+                circle.style.left = `${newLeft}px`;
+                circle.style.top = `${newTop}px`;
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        circle.addEventListener('click', () => {
+            const circleRect = circle.getBoundingClientRect();
+            let chatBoxLeft = circleRect.left;
+            let chatBoxTop = circleRect.bottom + window.scrollY + 15;
+
+            if (chatBoxLeft + chatBox.offsetWidth > windowWidth) {
+                chatBoxLeft = windowWidth - chatBox.offsetWidth - 15;
+            }
+
+            if (chatBoxTop + chatBox.offsetHeight > windowHeight) {
+                chatBoxTop = windowHeight - chatBox.offsetHeight - 15;
+            }
+
+            chatBox.style.left = `${chatBoxLeft}px`;
+            chatBox.style.top = `${chatBoxTop}px`;
+
+            if (chatBox.style.display === 'none' || chatBox.style.opacity === '0') {
+                chatBox.style.display = 'flex';
+                setTimeout(() => {
+                    chatBox.style.opacity = '1';
+                    chatBox.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                chatBox.style.opacity = '0';
+                chatBox.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    chatBox.style.display = 'none';
+                }, 300);
+            }
+        });
+
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && (userInput.value.trim() !== '' || currentImageTitle)) {
+                sendMessage();
+            }
+        });
+
+        sendBtn.addEventListener('click', sendMessage);
+
+        function sendMessage() {
+            const message = userInput.value.trim();
+            let messageContent = '';
+
+            if (currentImageTitle !== "Untitled Image") {
+                messageContent = `<div class="message user">
+                                    <img src="pfp1.png" class="profile-pic" />
+                                    User: <img src="${imagePreview.src}" class="image-preview" /> ${message}
+                                    <div class="file-name">${currentImageTitle}</div>
+                                  </div>`;
+                currentImageTitle = "Untitled Image"; // Reset title
+                imagePreviewContainer.style.display = 'none';
+            } else if (message) {
+                messageContent = `<div class="message user">
+                                    <img src="pfp1.png" class="profile-pic" />
+                                    User: ${message}
+                                  </div>`;
+            }
+
+            if (messageContent) {
+                chatContent.innerHTML += messageContent;
+                userInput.value = '';
+                chatContent.scrollTop = chatContent.scrollHeight;
+            }
+        }
+
+        emojiBtn.addEventListener('click', () => {
+            emojiContainer.style.display = emojiContainer.style.display === 'block' ? 'none' : 'block';
+        });
+
+        emojis.forEach((emoji) => {
+            emoji.addEventListener('click', () => {
+                userInput.value += emoji.getAttribute('data-emoji');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!emojiBtn.contains(e.target) && !emojiContainer.contains(e.target)) {
+                emojiContainer.style.display = 'none';
+            }
+        });
+
+        fileUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                    currentImageTitle = file.name || "Untitled Image";
+                    imageTitle.textContent = currentImageTitle;
+                    imagePreviewContainer.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        userInput.addEventListener('paste', (e) => {
+            const clipboardData = e.clipboardData;
+            const items = clipboardData.items;
+            for (let i = 0; i < items.length; i++) {
+                const item = items[i];
+                if (item.type.indexOf('image') !== -1) {
+                    const blob = item.getAsFile();
+                    const reader = new FileReader();
+                    reader.onload = function (event) {
+                        imagePreview.src = event.target.result;
+                        currentImageTitle = "Pasted Image";
+                        imageTitle.textContent = currentImageTitle;
+                        imagePreviewContainer.style.display = 'block';
+                    };
+                    reader.readAsDataURL(blob);
+                    e.preventDefault();
+                    break;
+                }
+            }
+        });
+
+        closeImagePreview.addEventListener('click', () => {
+            currentImageTitle = "Untitled Image";
+            imagePreviewContainer.style.display = 'none';
+        });
     </script>
 </body>
 </html>
