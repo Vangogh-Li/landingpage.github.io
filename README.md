@@ -5,9 +5,6 @@ Hello I am High
 
 
 
-School Student from NYC :3 
-
-
 This will be the landing page for Diptie
 
 https://internswipe.com
