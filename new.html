@@ -88,11 +88,6 @@
             font-size: 36px;
         }
 
-        .myh2{
-            margin-top: 10px;
-            margin-bottom: -10px;
-        }
-
         .subtitle {
             text-align: left;
             font-size: 22px;
@@ -244,6 +239,11 @@
             margin-top: 10px;
         }
 
+
+        .myh2{
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
         .cancel1:hover {
             background: #E1E8ED;
         }
@@ -289,7 +289,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            background-image: url(pfp1.png); /* Replace with your image URL */
+            background-image: url(pfp.png); /* Replace with your image URL */
             background-size: cover;
             background-position: center;
             box-shadow: 0 0 0 5px #7289DA; /* Ring effect */
@@ -589,7 +589,7 @@
             <img src="Logo1.png" alt="Logo" class="logo">
             <h2>Create Your Account</h2>
             <div id="signupProgress" style="margin-top: 10px; text-align: left;">Step 1 out of 2</div>
-            <input type="text" id="username" placeholder="Username" required>
+            <input type="text1" id="username" placeholder="Username" required>
             <input type="email" id="email" placeholder="Email" required>
             <input type="password" id="password" placeholder="Password" required>
             <div class="error-message" id="errorMessage"></div>
@@ -603,7 +603,7 @@
         <div class="modal-content">
             <button class="close-button" onclick="closeModal()">×</button>
             <img src="Logo1.png" alt="Logo" class="logo">
-            <h2>Login</h2>
+            <h2 class="myh2">Login</h2>
             <input type="email" id="loginEmail" placeholder="Email" required>
             <input type="password" id="loginPassword" placeholder="Password" required>
             <button onclick="login()" class="btn1">Login</button>
@@ -630,7 +630,7 @@
             <p class="subtitle1">Enter the verification code sent to your email.</p>
             <div id="signupProgress" style="margin-top: 10px; text-align: left;">Step 2 out of 2</div>
             <div class="countdown" id="verificationCountdown">You have until <span id="timeLeft">10:00</span> seconds to enter the code.</div>
-            <input type="text" id="verificationCode" placeholder="Enter verification code" required>
+            <input style="height: 25px; font-size: 15px;" type="emailverify" id="verificationCode" placeholder="Enter verification code" required>
             <button onclick="verifyCode()" class="btn1">Verify</button>
         </div>
     </div>
@@ -860,7 +860,7 @@
 
             if (currentImageTitle !== "Untitled Image") {
                 messageContent = `<div class="message user">
-                                    <img src="pfp1.png" class="profile-pic" />
+                                    <img src="pfp.png" class="profile-pic" />
                                     User: <img src="${imagePreview.src}" class="image-preview" /> ${message}
                                     <div class="file-name">${currentImageTitle}</div>
                                   </div>`;
@@ -868,7 +868,7 @@
                 imagePreviewContainer.style.display = 'none';
             } else if (message) {
                 messageContent = `<div class="message user">
-                                    <img src="pfp1.png" class="profile-pic" />
+                                    <img src="pfp.png" class="profile-pic" />
                                     User: ${message}
                                   </div>`;
             }
@@ -938,3 +938,4 @@
     </script>
 </body>
 </html>
+
