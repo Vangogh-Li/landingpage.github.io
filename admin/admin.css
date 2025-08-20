@@ -1,0 +1,72 @@
+body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; padding:24px; background:#0f0f0f; color:#eee; }
+    .card { background:#151515; border-radius:12px; padding:16px; box-shadow:0 8px 24px rgba(0,0,0,.3); }
+    table { width:100%; border-collapse:collapse; margin-top:12px; }
+    th,td { text-align:left; padding:10px; border-bottom:1px solid #2a2a2a; }
+    th { color:#bbb; }
+    input[type="search"]{ padding:8px 10px; border-radius:8px; border:1px solid #333; background:#0f0f0f; color:#fff; }
+    .badge{ padding:2px 8px; border-radius:9999px; background:#2a3b2a; color:#9fdf9f; font-size:12px; }
+
+
+
+
+
+/* toolbar layout */
+.toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* pretty search */
+  input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: min(420px, 100%);
+    padding: 10px 12px 10px 36px;     /* room for icon */
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    background: #0f0f0f;
+    color: #eee;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+  
+    /* subtle inner line */
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+  
+    /* search icon */
+    background-image: url('data:image/svg+xml;utf8,\
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%238a8a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>\
+      </svg>');
+    background-repeat: no-repeat;
+    background-position: 10px 50%;
+    background-size: 16px 16px;
+  }
+  input[type="search"]::placeholder { color: #9a9a9a; }
+  input[type="search"]:focus {
+    border-color: #3a86ff;
+    box-shadow: 0 0 0 3px rgba(58,134,255,.18), inset 0 0 0 1px rgba(255,255,255,.04);
+    background: #111;
+  }
+  
+  /* refresh button to match theme */
+  #refresh {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    background: #232323;
+    color: #eee;
+    cursor: pointer;
+    transition: background .15s, border-color .2s, transform .05s;
+    box-shadow: 0 1px 0 rgba(255,255,255,.03) inset;
+  }
+  #refresh:hover { background: #2b2b2b; border-color: #3a3a3a; }
+  #refresh:active { transform: translateY(1px); }
+  
+  /* mobile: let search grow, keep button snug */
+  @media (max-width: 640px) {
+    .toolbar { gap: 8px; }
+    input[type="search"] { flex: 1; width: auto; }
+  }
+  

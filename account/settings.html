@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Profile Settings</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./settings.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="page-title">Profile Settings</h1>
+    <p class="page-sub">Manage your account settings and preferences</p>
+
+    <section class="card">
+      <div class="avatar-row">
+        <div id="avatar" class="avatar">L</div>
+        <div class="avatar-meta">
+          <div class="avatar-title">Profile Picture</div>
+          <div class="avatar-sub">Custom profile picture</div>
+        </div>
+        <label class="btn outline">
+          <input id="photoInput" type="file" accept="image/*" hidden />
+          Change Photo
+        </label>
+      </div>
+
+      <form id="settingsForm" novalidate>
+        <label class="field">
+          <span>Email Address</span>
+          <input id="email" type="email" disabled />
+          <small class="muted">Email address cannot be changed</small>
+        </label>
+
+        <label class="field">
+          <span>Display Name</span>
+          <input id="displayName" type="text" maxlength="20" placeholder="How your name appears to others" />
+        </label>        
+
+        <div class="grid">
+          <label class="field">
+            <span>First Name</span>
+            <input id="firstName" type="text" />
+          </label>
+          <label class="field">
+            <span>Last Name</span>
+            <input id="lastName" type="text" />
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Username</span>
+          <input id="username" type="text" />
+          <small class="muted">Must be unique. Defaults to your email before the @ if left blank.</small>
+        </label>
+
+        <div class="actions">
+          <button type="button" class="btn ghost" id="cancelBtn">Cancel</button>
+          <button type="submit" class="btn primary" id="saveBtn">
+            <span class="icon">💾</span> Save Changes
+          </button>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- This page is self-contained and does not need your whole index.js -->
+  <script src="./settings.js"></script>
+</body>
+</html>

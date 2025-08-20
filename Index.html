@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navbar</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+  <script src="index.js" defer></script> 
+  <script src="Brouse.js" defer></script> 
+</head>
+<body>
+    <div style="height: 50px;"></div>
+    <header id="Navigator">
+        <a href="#"><img id="LogoNav" src="Images/LogoNav.png" alt="Logo"/></a>
+        <nav>
+          <ul class="navbar">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" id="signInLink">Sign In</a></li>
+          </ul>
+        </nav>
+      </header> 
+      <div class="page-backdrop"></div>
+
+<main class="home">
+
+  <!-- SAT / PSAT / ACT -->
+<section id="sat" class="section">
+  <div class="section-head">
+    <h2>SAT / PSAT / ACT</h2>
+    <p class="muted">Exam-focused practice, broken into sub-sections.</p>
+  </div>
+
+  <div class="grid">
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Exam</span></div>
+      <h3>SAT Reading &amp; Writing</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice/practice.html" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Exam</span></div>
+      <h3>SAT Math</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=sat-math" style="margin-top:8px">Practice</a>
+    </article>
+
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Exam</span></div>
+      <h3>PSAT Math</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=psat-math" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Exam</span></div>
+      <h3>ACT (Composite)</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=act" style="margin-top:8px">Practice</a>
+    </article>
+  </div>
+</section>
+
+<!-- AP Courses -->
+<section id="ap" class="section">
+  <div class="section-head">
+    <h2>AP Courses</h2>
+    <p class="muted">AP math &amp; science subjects you can drill.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Calculus AB</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apc-ab" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Calculus BC</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apc-bc" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Statistics</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apstat" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Physics 1</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=app1" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Physics 2</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=app2" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Physics C: Mechanics</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=appc-m" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Physics C: E&amp;M</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=appc-e" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Chemistry</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apchem" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Biology</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apbio" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Computer Science A</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apcsa" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP World History</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apcsp" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP US History</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apcsp" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP European History</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apcsp" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Psychology</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apcsp" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Microeconomics</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apmicro" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">AP</span></div>
+      <h3>AP Macroeconomics</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=apmacro" style="margin-top:8px">Practice</a>
+    </article>
+  </div>
+</section>
+
+<!-- Olympiads -->
+<section id="oly" class="section">
+  <div class="section-head">
+    <h2>Olympiads</h2>
+    <p class="muted">Contest-style problem solving.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card glass">
+      <div class="meta"><span class="badge">Olympiad</span></div>
+      <h3>AMC 8</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=amc8" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Olympiad</span></div>
+      <h3>AMC 10</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=amc10" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Olympiad</span></div>
+      <h3>AMC 12</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=amc12" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Olympiad</span></div>
+      <h3>AIME</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=aime" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Olympiad</span></div>
+      <h3>Biolympiad (USABO)</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=usabo" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Olympiad</span></div>
+      <h3>Science Olympiad</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=scioly" style="margin-top:8px">Practice</a>
+    </article>
+  </div>
+</section>
+
+<!-- Post-AP Math -->
+<section id="post" class="section">
+  <div class="section-head">
+    <h2>Post-AP Math</h2>
+    <p class="muted">University-level extensions beyond AP.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card glass">
+      <div class="meta"><span class="badge">Post-AP</span></div>
+      <h3>Linear Algebra</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=linalg" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Post-AP</span></div>
+      <h3>Multivariable Calculus</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=mvc" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Post-AP</span></div>
+      <h3>Differential Equations</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=diffeq" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Post-AP</span></div>
+      <h3>Number Theory</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=nt" style="margin-top:8px">Practice</a>
+    </article>
+
+    <article class="card glass">
+      <div class="meta"><span class="badge">Post-AP</span></div>
+      <h3>Combinatorics</h3>
+      <div class="meta">0% complete</div>
+      <div class="progressbar"><span style="width:0%"></span></div>
+      <a class="btn" href="practice.html?topic=comb" style="margin-top:8px">Practice</a>
+    </article>
+  </div>
+</section>
+</main>
+     
+</body>
+</html>

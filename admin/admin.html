@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Admin – Users (Local)</title>
+  <link rel="stylesheet" href="./admin.css" />
+</head>
+<body>
+  <h1>Admin – Users (Local)</h1>
+  <div class="card">
+    <div>
+      <input id="search" type="search" placeholder="Search email..." />
+      <button id="refresh">Refresh</button>
+    </div>
+    <table>
+      <thead><tr><th>ID</th><th>Email</th><th>Created</th><th>Role</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <!-- reuse your local auth functions from index.js -->
+  <script src="../index.js"></script>
+  <script>
+    async function load() {
+      const me = await getMe();
+      if (!me.user) { alert("Sign in first"); location.href = "../Index.html"; return; }
+      if (!me.user.is_admin) { alert("Admin only"); location.href = "../Index.html"; return; }
+
+      const q = document.getElementById('search').value.trim();
+      const data = await adminListUsers({ q, page:1, pageSize:1000 });
+      document.getElementById('rows').innerHTML = data.users.map(u => `
+        <tr>
+          <td>${u.id}</td>
+          <td>${u.email}</td>
+          <td>${new Date(u.created_at).toLocaleString()}</td>
+          <td>${u.is_admin ? '<span class="badge">admin</span>' : 'user'}</td>
+        </tr>
+      `).join('');
+    }
+    document.getElementById('refresh').onclick = load;
+    document.getElementById('search').oninput = load;
+    load();
+  </script>
+</body>
+</html>
